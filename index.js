@@ -12,7 +12,7 @@ app.use(cors(corsOptions));
 
 const { initializeDatabase } = require("./db/db.connect");
 
-const fs = require("fs");
+// const fs = require("fs");
 const BookNest = require("./models/book.model");
 const AppUser = require("./models/appUser.model");
 
@@ -20,8 +20,8 @@ app.use(express.json());
 
 initializeDatabase();
 
-const jsonData = fs.readFileSync("booksData.json", "utf-8");
-const booksData = JSON.parse(jsonData);
+// const jsonData = fs.readFileSync("booksData.json", "utf-8");
+// const booksData = JSON.parse(jsonData);
 
 function seedData() {
   try {
